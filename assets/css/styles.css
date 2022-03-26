@@ -10,11 +10,11 @@ selector {
 }
 */
 
-/*Importing fonts*/
+/*======================Importing fonts======================*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
 /*Importing fonts end*/
 
-/*Variable*/
+/*===========================Variables===========================*/
 :root {
     --font-family: 'Montserrat', sans-serif;
     --normal-font: 400;
@@ -27,6 +27,7 @@ selector {
     --secondary-color: #ff7235;
     --primary-shadow: #8b8eaf;
     --secondary-shadow: #a17a69;
+    --header-margin: 2rem;
     --bottom-margin: 1rem;
     --bottom-margin-2: 1.7rem;            /* 1rem = 16px*/
     --transition: 0.3s;
@@ -44,6 +45,7 @@ html {
     box-sizing: border-box;
 }
 
+/*============================NavigationBar===============================*/
 ul {
     list-style-type: none;
 }
@@ -108,21 +110,20 @@ nav ul li {
     display: none;
 }
 
-/*=========Skills==========*/
+/*===========================Skills=============================*/
 .skills {
-    background-color: grey;
+    background-color: violet;
 }
 
 .skills-container {
-    max-width: 85rem;
+    max-width: 80rem;
     margin: auto;
     text-align: center;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 5rem 0;
 }
 
 .skills-header {
-    margin-bottom: 2rem;
+    margin-bottom: var(--header-margin);
     font-size: 32px;
 }
 
@@ -137,9 +138,74 @@ nav ul li {
 
 .icon-card{
     background-color: #fff;
-    border-radius: 11px;
     box-shadow: 0 3px 10px var(--secondary-shadow);
     padding: 10px;
     margin: 10px;
+    border-radius: 11px;
     border: 3px solid black;
 }
+
+/*=============================Projects===========================*/
+.projects{
+    background-color: yellow;
+}
+
+.projects-container{
+    max-width: 80rem;
+    margin: auto;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.projects-header {
+    margin-bottom: var(--header-margin);
+    font-size: 32px;
+}
+
+.projects-pic {
+    width: 65%;
+    height: 60%;
+}
+
+.projects-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-wrapper {
+    text-align: center;
+    width: 21.875rem;
+    padding: 1rem;
+    border: 3px solid black;
+}
+
+.projects-title {
+    text-align: center;
+    margin-bottom: var(--bottom-margin);
+}
+
+.projects-details {
+    margin-bottom: var(--bottom-margin);
+}
+
+.projects-card {
+    background-color: #fff;
+    border-radius: 11px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+.project-wrapper p {
+    padding: 0.4rem;
+}
+
+.project-wrapper a {
+    padding: 8px 20px;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+/*=======================Contact Form===========================*/

@@ -130,42 +130,43 @@
     <!-- Projects section -->
     <section class="projects" id="projects">
         <div class="projects-container">
-            <h2 class="projects-title">My Projects</h2>
+            <h2 class="projects-header">My Projects</h2>
+
             <div class="projects-wrapper">
-                <div class="projects-wrapper projects-card">
+                <div class="project-wrapper projects-card">
                     <img
                     src="assets/images/constructionweb.png"
                     alt="#constructionweb"
                     class="projects-pic"
                     />
                     <h3 class="projects-title">Construction Website</h3>
-                    <p class="project-details">
+                    <p class="projects-details">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasratione
                      vel inventore labore commodi modi quos culpa aut saepe!Alias!
                     </p>
                     <a href="https://www.shrimangalamconstruction.in/" target="_blank" class="projects-link">Check it out.</a>
                 </div>
-                <div class="projects-wrapper projects-card">
+                <div class="project-wrapper projects-card">
                     <img
                     src="assets/images/portfolio.png"
                     alt="#portfolioweb"
                     class="projects-pic"
                     />
                     <h3 class="projects-title">Portfolio Website</h3>
-                    <p class="project-details">
+                    <p class="projects-details">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasratione
                      vel inventore labore commodi modi quos culpa aut saepe!Alias!
                     </p>
                     <a href="#" target="_blank" class="projects-link">Check it out.</a>
                 </div>
-                <div class="projects-wrapper projects-card">
+                <div class="project-wrapper projects-card">
                     <img
                     src="assets/images/hotelmanagement.png"
                     alt="#hotelmanagement"
                     class="projects-pic"
                     />
                     <h3 class="projects-title">Hotel Management</h3>
-                    <p class="project-details">
+                    <p class="projects-details">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasratione
                      vel inventore labore commodi modi quos culpa aut saepe!Alias!
                     </p>
@@ -176,6 +177,58 @@
     </section>
 
     <!-- Contact section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="contact-header">Contact me</h2>
+
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xyylngw" method="POST">
+                        <div class="form-control">
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="sender-name"
+                                placeholder="Enter Your Name"
+                                class="input-field"
+                                required
+                            />
+                        </div>
+                        <div class="form-control">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="sender-email"
+                                placeholder="Enter Your Email"
+                                class="input-field"
+                                required
+                            />
+                        </div>
+                        <div class="form-control">
+                            <label for="message">Message</label>
+                            <textarea
+                                id="message"
+                                cols="60"
+                                rows="10"
+                                placeholder="Enter Your Message"
+                                name="message"
+                                class="input-field"
+                                required
+                            ></textarea>
+                        </div>
+                        <input
+                            type="submit"
+                            value="Submit"
+                            id="submit-btn"
+                            class="submit-btn"
+                        />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Social accounts - Fixed to the right -->
 
