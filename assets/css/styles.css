@@ -107,3 +107,39 @@ nav ul li {
     cursor: pointer;
     display: none;
 }
+
+/*=========Skills==========*/
+.skills {
+    background-color: grey;
+}
+
+.skills-container {
+    max-width: 85rem;
+    margin: auto;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.skills-header {
+    margin-bottom: 2rem;
+    font-size: 32px;
+}
+
+.skills-wrapper img {
+    padding: 1.25rem;
+}
+
+.icon {
+    width: 11.25rem;
+    height: 11.25rem;
+}
+
+.icon-card{
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid black;
+}
