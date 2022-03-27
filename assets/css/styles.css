@@ -31,6 +31,8 @@ selector {
     --bottom-margin: 1rem;
     --bottom-margin-2: 1.7rem;            /* 1rem = 16px*/
     --transition: 0.3s;
+    --bg-color-1: #fffdd0;
+    --bg-color-2: #1f1f1f;
 }
 /*Variable End*/
 
@@ -112,7 +114,7 @@ nav ul li {
 
 /*===========================Skills=============================*/
 .skills {
-    background-color: violet;
+    background-color: var(--bg-color-1);
 }
 
 .skills-container {
@@ -142,12 +144,11 @@ nav ul li {
     padding: 10px;
     margin: 10px;
     border-radius: 11px;
-    border: 3px solid black;
 }
 
 /*=============================Projects===========================*/
 .projects{
-    background-color: yellow;
+    background-color: var(--primary-color);
 }
 
 .projects-container{
@@ -209,3 +210,68 @@ nav ul li {
 }
 
 /*=======================Contact Form===========================*/
+.contact {
+    background-color: var(--bg-color-1);
+}
+
+.contact-container {
+    max-width: 80rem;
+    margin: auto;
+    padding: 5rem 0;
+}
+
+.contact-header {
+    margin-bottom: var(--header-margin);
+    font-size: 32px;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 11px;
+    border: 3px solid black;
+    background-color: #fff;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+.contact-form label{
+    line-height: 2.7rem;
+    font-weight: var(--semibold-font);
+    color: var(--primary-color);
+
+}
+
+.contact-form textarea{
+    min-height: 6.25rem;
+    font-size: 14px;
+}
+
+.contact-form .input-field {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    border: 2px solid grey;
+    font-size: 0.875rem;
+    outline: none;
+}
+
+.input-field::placeholder {
+  padding: 0.5rem;
+  color: var(--primary-color);
+}
+
+.submit-btn {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-weight: var(--semibold-font);
+    color: var(--primary-color);
+    background-color: #fff;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+}
