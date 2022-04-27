@@ -23,16 +23,16 @@ selector {
     --bold-font: 700;
     --bolder-font: 900;
     --header-margin: 2rem;
-    --bottom-margin: 1rem;
-    --bottom-margin-2: 1.7rem;            /* 1rem = 16px*/
+    --bottom-margin-1: 1rem;
+    --bottom-margin-2: 0.5rem;            /* 1rem = 16px*/
     --transition: 0.3s;
     --heading-color: #1F1F25;
     --para-color: #303030;
-    --primary-color: #4756df;
-    --secondary-color: #ff7235;
+    --primary-color: #000000/*#4756df*/;
+    --secondary-color: #000000/*#ff7235*/;
     --bg-color:  #fcfcfc;
-    --bg-color-1: #fffdd0;
-    --bg-color-2: #C7CCF5;
+    --bg-color-1: #f0f0f0;
+    --bg-color-2: #ffffff;
     --primary-shadow: #8b8eaf;
     --secondary-shadow: #a17a69;
 }
@@ -85,7 +85,7 @@ nav {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 10000;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -134,16 +134,15 @@ nav ul li {
 /*=========================Hero=============================*/
 .hero {
     width: 100%;
-    height: 100vh;
-    /*background: url(assets/images/constructionweb.png);
+    /*height: 100vh;*/
+    /*background: url("assets/images/constructionweb.png");
     background-size: cover;*/
     background-color: var(--bg-color-2);
 }
 
 .hero-container {
-    position: absolute;
-    top: 35%;
-    left: 3.5rem;
+    max-width: 80rem;
+    margin: 15% auto;
 }
 
 .hero-container h1{
@@ -188,10 +187,10 @@ nav ul li {
     padding: 16px 40px;
     display: inline-block;
     transition: all .3s ease-in-out;
-    background-size: 152% 100%;
+    /*background-size: 152% 100%;*/
     background: var(--primary-color);
     border: 2px solid var(--primary-color);
-    border-radius: 500px;
+    border-radius: 5px;
 }
 
 .cv-btn:hover{
@@ -217,6 +216,10 @@ nav ul li {
     font-size: 2rem;
 }
 
+.skills-container p{
+    margin: 1rem 0rem;
+}
+
 .skills-wrapper img {
     padding: 1.25rem;
 }
@@ -228,10 +231,9 @@ nav ul li {
 
 .icon-card{
     background-color: white;
-    box-shadow: 0 3px 10px var(--secondary-shadow);
-    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
     margin: 10px;
-    border-radius: 11px;
+    border: 1px solid #dadce0;
 }
 
 /*=============================Projects===========================*/
@@ -241,19 +243,18 @@ nav ul li {
 
 .projects-container{
     max-width: 80rem;
-    margin: auto;
     text-align: center;
     padding: 5rem 0;
+    margin: auto;
 }
 
-.projects-header {
+.projects-container .projects-header {
     margin-bottom: var(--header-margin);
-    font-size: 2rem;;
+    font-size: 2rem;
 }
 
-.projects-pic {
-    width: 65%;
-    height: 60%;
+.projects-container p{
+    margin: 1rem 0rem;
 }
 
 .projects-wrapper {
@@ -262,37 +263,36 @@ nav ul li {
     justify-content: center;
 }
 
+.project-wrapper .project-pic {
+    width: 100%;
+    height: auto;
+}
+
 .project-wrapper {
-    text-align: center;
-    width: 21.875rem;
-    padding: 1rem;
+    text-align: left;
+    max-width: 25rem;
 }
 
-.projects-title {
-    text-align: center;
-    margin-bottom: var(--bottom-margin);
+.project-title {
+    font-weight: var(--medium-font);
 }
 
-.projects-details {
-    margin-bottom: var(--bottom-margin);
-}
-
-.projects-card {
+.project-card {
     background-color: white;
-    border-radius: 11px;
-    margin: 10px;
-    padding: 20px;
-    box-shadow: 0 3px 10px var(--secondary-shadow);
+    margin: 0.7rem auto;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    border: 1px solid #dadce0;
 }
 
-.project-wrapper p {
-    padding: 0.4rem;
+.project-wrapper .inner-box{
+    padding: 30px;
+    margin-bottom: var(--bottom-margin-2);
 }
 
 .project-wrapper a {
     padding: 8px 20px;
     background-color: var(--primary-color);
-    border-radius: 30px;
+    border-radius: 5px;
     color: white;
     font-weight: var(--semibold-font);
     transition: all 0.4s ease-in-out;
@@ -313,53 +313,64 @@ nav ul li {
 .contact-container {
     max-width: 80rem;
     margin: auto;
+    text-align: center;
     padding: 5rem 0;
 }
 
-.contact-header {
+.contact-container .contact-header {
     margin-bottom: var(--header-margin);
     font-size: 2rem;
-    text-align: center;
 }
 
-.contact-form {
-    max-width: 40rem;
+.contact-container p{
+    margin: 1rem 0rem;
+}
+
+.contact-container .contact-wrapper{
+    display: flex;
+    text-align: left;
+    max-width: 60rem;
     margin: 0 auto;
-    padding: 1rem;
-    border-radius: 11px;
+    /*padding: 1rem 0rem;*/
     background-color: white;
-    box-shadow: 0 3px 10px var(--secondary-shadow);
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    border: 1px solid #dadce0;
 }
 
-.contact-form label{
+.contact-wrapper .contact-form {
+    max-width: 40rem;
+    flex-basis: 60%;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+}
+
+/*.contact-form label{
+    text-align: left;
     line-height: 2.7rem;
     font-weight: var(--semibold-font);
     color: var(--primary-color);
+}*/
 
-}
-
-.contact-form textarea{
+.contact-wrapper .contact-form textarea{
     min-height: 6.25rem;
     font-size: 14px;
 }
 
-.contact-form .input-field {
+.contact-wrapper .contact-form .input-field {
     width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px;
-    border: none;
-    border: 2px solid grey;
+    margin: 0.5rem 0rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #dadce0;
     font-size: 0.875rem;
     outline: none;
 }
 
-.input-field::placeholder {
+.contact-wrapper .contact-form .input-field::placeholder {
   padding: 0.5rem;
   color: var(--primary-color);
 }
 
-.submit-btn {
+.contact-wrapper .contact-form .submit-btn {
     padding: 10px;
     margin-top: 10px;
     font-size: 1rem;
@@ -368,12 +379,29 @@ nav ul li {
     color: white;
     background-color: var(--primary-color);
     border: 2px solid var(--primary-color);
-    border-radius: 4px;
+    border-radius: 5px;
     transition: var(--transition);
 }
 
-.submit-btn:hover {
+.contact-wrapper .contact-form .submit-btn:hover {
     background-color: transparent;
     color: var(--primary-color);
-    border-color: var(--primary-color);
+}
+
+.contact-wrapper .contact-info {
+    flex-basis: 40%;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 2rem;
+}
+
+.contact-info .info-blocks {
+    margin-bottom: var(--bottom-margin-1);
+}
+
+/*======================Selection colour=============================*/
+::selection {
+    background: #444;
+    color: #ffffff;
+    text-shadow: none;
 }
